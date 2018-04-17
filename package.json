@@ -1,5 +1,6 @@
 {
     "name": "react-redux-rx-boilerplate-wip",
+    "description": "Boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
     "version": "0.1.0",
     "private": false,
     "scripts": {
