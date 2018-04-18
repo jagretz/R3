@@ -1,32 +1,37 @@
 {
-    "name": "react-redux-rx-boilerplate-wip",
-    "description": "Boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
-    "version": "0.1.0",
-    "private": false,
-    "scripts": {
-        "start": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired start",
-        "build": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired build",
-        "test": "react-app-rewired test --env=jsdom",
-        "eject": "react-app-rewired eject",
-        "prettier": "prettier --write \"./**/*.js\""
-    },
-    "dependencies": {
-        "react": "^16.3.1",
-        "react-dom": "^16.3.1",
-        "react-redux": "^5.0.7",
-        "react-scripts": "1.1.4",
-        "redux": "^4.0.0",
-        "redux-observable": "^0.18.0",
-        "rxjs": "^5.5.10"
-    },
-    "devDependencies": {
-        "identity-obj-proxy": "^3.0.0",
-        "postcss": "^6.0.21",
-        "postcss-cssnext": "^3.1.0",
-        "postcss-custom-properties": "^7.0.0",
-        "postcss-import": "^11.1.0",
-        "postcss-nested": "^3.0.0",
-        "prettier": "^1.12.0",
-        "react-app-rewired": "^1.5.0"
-    }
+  "name": "react-redux-rx-boilerplate-wip",
+  "description": "Boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "start": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired start",
+    "build": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired build",
+    "test": "react-app-rewired test --env=jsdom",
+    "eject": "react-app-rewired eject",
+    "prettier": "prettier --write \"./**/*.js\""
+  },
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.3.1",
+    "react-dom": "^16.3.1",
+    "react-redux": "^5.0.7",
+    "react-scripts": "1.1.4",
+    "redux": "^4.0.0",
+    "redux-first-router": "0.0.16-next",
+    "redux-first-router-link": "^1.4.2",
+    "redux-observable": "^0.18.0",
+    "rxjs": "^5.5.10"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "identity-obj-proxy": "^3.0.0",
+    "postcss": "^6.0.21",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-custom-properties": "^7.0.0",
+    "postcss-import": "^11.1.0",
+    "postcss-nested": "^3.0.0",
+    "prettier": "^1.12.0",
+    "prop-types": "^15.6.1",
+    "react-app-rewired": "^1.5.0"
+  }
 }
