@@ -1,3 +1,4 @@
+const rewireCssModules = require("./rewireConfig/cssModules");
 const rxPipeableOperators = require("./rewireConfig/rxPipeableOperators");
 
 /* A note on configuration:
@@ -6,6 +7,7 @@ const rxPipeableOperators = require("./rewireConfig/rxPipeableOperators");
  */
 
 module.exports = function override(config, env) {
+    config = rewireCssModules(config, env);
     config = rxPipeableOperators(config, env);
     return config;
 };
