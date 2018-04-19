@@ -1,0 +1,12 @@
+{
+    "*.js": [
+        "npm run eslint:staged",
+        "npm run prettier",
+        "git add"
+    ],
+    "*.css": [
+        "stylelint:fix",
+        "npm run stylelint",
+        "git add"
+    ]
+}

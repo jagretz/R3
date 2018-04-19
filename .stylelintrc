@@ -1,0 +1,9 @@
+{
+    "rules": {
+        "selector-max-id": 1,
+        "declaration-block-no-redundant-longhand-properties": [true, {
+            "ignoreShorthands": ["grid", "/template/"]
+            }
+        ]
+    }
+}
