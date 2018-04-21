@@ -1,5 +1,10 @@
 module.exports = {
-    rules: {
+    "extends": [
+        "airbnb/rules/react",
+        "airbnb/rules/react-a11y"
+    ],
+    "rules": {
+        "react/jsx-indent": ["error", 4],
         "jsx-a11y/label-has-for": [
             2,
             {
@@ -9,7 +14,6 @@ module.exports = {
                 },
                 allowChildren: true
             }
-        ],
-        "no-console": ["error", { allow: ["info", "warn", "error"] }]
+        ]
     }
 };

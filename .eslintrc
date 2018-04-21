@@ -1,7 +1,6 @@
 {
     "extends": [
-        "airbnb",
-        "prettier",
-        "./eslint-overrides.js"
+        "./eslint-base.js",
+        "./eslint-react.js"
     ]
 }
