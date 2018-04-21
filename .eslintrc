@@ -1,0 +1,7 @@
+{
+    "extends": [
+        "airbnb",
+        "prettier",
+        "./eslint-overrides.js"
+    ]
+}
