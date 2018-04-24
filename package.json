@@ -27,12 +27,13 @@
     "//jest": "Jest configuration with create-react-app MUST exist in package.json. It does not execute if contained in a separate jest configuration file.",
     "jest": {
         "setupFiles": [
-            "jest-localstorage-mock"
+            "jest-localstorage-mock",
+            "./jestConfig/console.js"
         ],
+        "setupTestFrameworkScriptFile": "./jestConfig/configureEnzymeAdapter.js",
         "coveragePathIgnorePatterns": [
             "src/index.js",
-            "registerServiceWorker.js",
-            "setupTests.js"
+            "registerServiceWorker.js"
         ],
         "coverageThreshold": {
             "global": {
