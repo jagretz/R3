@@ -24,11 +24,10 @@
     "bin": {
         "jest": "./node_modules/jest/bin"
     },
-    "//jest": "Jest configuration with create-react-app MUST exist in package.json. It does not execute if contained in a separate jest configuration file.",
+    "//jest": "See ./jestSetup/README for additional setup & configuration details",
     "jest": {
         "setupFiles": [
-            "jest-localstorage-mock",
-            "./jestConfig/console.js"
+            "jest-localstorage-mock"
         ],
         "setupTestFrameworkScriptFile": "./jestConfig/configureEnzymeAdapter.js",
         "coveragePathIgnorePatterns": [
