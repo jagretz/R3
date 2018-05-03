@@ -55,7 +55,8 @@ methods won't exist _(pssst, they exist in node v7+)_
 
 #### Resources
 
-- [tc39 > proposal-object-values-entries > polyfill](https://github.com/tc39/proposal-object-values-entries/blob/master/polyfill.js)
 - [Jest > Remove auto-inclusion of babel-polyfill #2755](https://github.com/facebook/jest/pull/2755)
 - [Jest > Changelog](https://github.com/facebook/jest/blob/cf2b9e80a0b099c2f861660fd9cf589848106fa1/CHANGELOG.md)
 - [Jest > Breaking Changes](https://github.com/facebook/jest/blob/e4f7d84568c16f692b08c954183ca524c14eced1/website/blog/2017-05-06-jest-20-delightful-testing-multi-project-runner.md#breaking-changes)
+- [npm > babel-polyfill](https://www.npmjs.com/package/babel-polyfill)
+- [tc39 > proposal-object-values-entries > polyfill](https://github.com/tc39/proposal-object-values-entries/blob/master/polyfill.js)
