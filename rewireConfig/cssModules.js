@@ -1,6 +1,6 @@
 const path = require("path");
 /* eslint-disable  import/no-extraneous-dependencies */
-const postcssCssNext = require("postcss-cssnext");
+const postcssPresetEnv = require("postcss-preset-env");
 const postcssCustomMedia = require("postcss-custom-media");
 const postCssCustomProperties = require("postcss-custom-properties");
 const postcssImport = require("postcss-import");
@@ -48,7 +48,7 @@ module.exports = function override(config, env) {
     const postcssPlugins = cssRule[target][postcssLoaderIndex].options.plugins();
 
     /*
-     * cssNext already contains autoprefixer so we remove the duplicate to improve performance.
+     * postcss-preset-env already contains autoprefixer so we remove the duplicate to improve performance.
      * We do this before we add any additional plugins.
      */
     const autoprefixerIndex = postcssPlugins.findIndex(plugin => plugin.postcssPlugin === "autoprefixer");
@@ -58,7 +58,7 @@ module.exports = function override(config, env) {
         postcssImport({
             path: path.resolve(__dirname, "../src/")
         }),
-        postcssCssNext,
+        postcssPresetEnv,
         postcssNested,
         postcssCustomMedia,
         postCssCustomProperties
