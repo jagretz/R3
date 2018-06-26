@@ -1,5 +1,5 @@
 const rewireCssModules = require("./rewireConfig/cssModules");
-const rxPipeableOperators = require("./rewireConfig/rxPipeableOperators");
+const rxPipeableOperators = require("./rewireConfig/pipeableOperators");
 
 /* A note on configuration:
  * When configuring mulitple override files, use the built-in `compose` function.

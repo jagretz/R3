@@ -5,8 +5,8 @@ const postcssCustomMedia = require("postcss-custom-media");
 const postCssCustomProperties = require("postcss-custom-properties");
 const postcssImport = require("postcss-import");
 const postcssNested = require("postcss-nested");
-/* eslint-enable */
 const { getLoader } = require("react-app-rewired");
+/* eslint-enable */
 
 /**
  * This override extracts the original rules for CSS applied by create-react-app (CRA) to allow the use of both
