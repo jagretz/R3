@@ -2,11 +2,11 @@
     "*.js": [
         "npm run eslint:staged",
         "npm run prettier",
-        "git add"
+        "git add -u"
     ],
     "*.css": [
         "stylelint:fix",
         "npm run stylelint",
-        "git add"
+        "git add -u"
     ]
 }

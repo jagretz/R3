@@ -38,7 +38,6 @@
         "no-missing-end-of-source-newline": null,
         "selector-list-comma-newline-after": "always",
         "selector-max-id": 1,
-        "selector-no-id": true,
         "selector-no-qualifying-type": [
             true,
             {

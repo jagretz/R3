@@ -7,6 +7,8 @@ _This document is survived by you! Please help us keep this a living document by
 ## Table of Contents
 
 - [Installation & Startup](#installation-startup)
+- [Standards & Best Practices](#standards-best-practices)
+- [Testing](#testing)
 
 
 ## Installation & Startup
