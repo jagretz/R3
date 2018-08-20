@@ -9,6 +9,8 @@ _This document is survived by you! Please help us keep this a living document by
 - [Installation & Startup](#installation-startup)
 - [Standards & Best Practices](#standards-best-practices)
 - [Testing](#testing)
+- [Documentation](#Documentation)
+- [Troubleshooting](#Troubleshooting)
 
 
 ## Installation & Startup
@@ -53,6 +55,28 @@ If our test setup and configuration interests you, or if there is ever a need to
 Configuration for these metrics is maintained inside package.json. Jest allows you to maintain a separate configuation file, however because we bootstrap the app with [create-react-app](create-react-app), the jest configuration must be maintained within the `package.json` as a top-level property. In order to override this we would need to extend the existing webpack configuration for testing with our own implementation.
 
 Jest by default will run in a web environment using `jsdom`. Thought you might have noticed we include a specific `--env=jsdom` flag with our test scripts. This is another side effect from extending create-react-app which changes the default environemnt to node for improved performance. Not a big deal, but it's important to know why.
+
+## Docuemntation
+
+[JSDoc](http://usejsdoc.org) has several forms of documenting the same thing. That's fine but it's easier when jumping into a project to have a bit of consistency. The following should clear up an ambiguity regarding preferences when using jsdoc.
+
+### `@link`
+
+[`@link`](http://usejsdoc.org/tags-inline-link.html)
+
+Linking to external resources, ie https://www.google.com/ .
+
+Prefer,
+
+```js
+// provided a name -- prefer
+[link text]{@link namepathOrURL}
+// no name -- only when a name does not make a whole lot of sense (rare case)
+{@link namepathOrURL}
+```
+
+This approach is much quicker to read and understand what said string links to as opposed to parsing the url string to figure that out. URLs can be qutie log and ambiguous at times. Provided a name, first, is clear and tells the reader _immediately_ what said link is all about.
+
 
 ## Troubleshooting
 
