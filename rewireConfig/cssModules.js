@@ -9,12 +9,17 @@ const { getLoader } = require("react-app-rewired");
 /* eslint-enable */
 
 /**
- * This override extracts the original rules for CSS applied by create-react-app (CRA) to allow the use of both
- * static CSS files and teh use of CSS Modules.
+ * This override extracts the original rules for CSS applied by create-react-app (CRA) to allow the
+ * use of both static CSS files and teh use of CSS Modules.
  * - Updates the postCSS loader with additional postCss plugins.
  * - Adds a rule for css modules.
  *
  * Plugins added to postCSS apply to both static and module CSS.
+ *
+ * @param {object} config configuration provided through create-react-app
+ * @param {object} env configured env. May be declared implicitly or explicitly with node before
+ * running the command.
+ * @return {object} overriden webpack configuration
  *
  * @see webpack rules https://webpack.js.org/configuration/module/#rule
  * @see cssLoader https://github.com/webpack-contrib/css-loader

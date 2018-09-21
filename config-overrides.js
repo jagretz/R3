@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const rewireCssModules = require("./rewireConfig/cssModules");
 const rxPipeableOperators = require("./rewireConfig/pipeableOperators");
 
