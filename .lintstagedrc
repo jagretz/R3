@@ -1,11 +1,11 @@
 {
     "*.js": [
-        "npm run eslint:staged",
+        "npm run eslint:commit",
         "npm run prettier",
         "git add -u"
     ],
     "*.css": [
-        "stylelint:fix",
+        "npm run stylelint:fix",
         "npm run stylelint",
         "git add -u"
     ]

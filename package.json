@@ -16,7 +16,7 @@
         "precommit": "npm run test:coverage&&lint-staged",
         "eslint": "eslint ./",
         "eslint:fix": "npm run eslint -- --fix",
-        "eslint:staged": "npm run eslint -- --rule \"no-console: 2\" --rule \"no-debugger: 2\" --fix",
+        "eslint:commit": "npm run eslint -- --rule \"no-console: 2\" --rule \"no-debugger: 2\" --fix",
         "stylelint": "stylelint ./**/*.css",
         "stylelint:fix": "stylelint ./**/*.css --fix",
         "prettier": "prettier --write \"./**/*.js\""

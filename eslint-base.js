@@ -1,17 +1,15 @@
+/**
+ * All formatting rRule should be managed by prettier. We turn off multiple eslint rules
+ * in order to remove conflicts with prettier rules.
+ */
 module.exports = {
-    // "extends": [
-    //     "airbnb",
-    //     "airbnb-base/rules/es6",
-    //     "airbnb-base/rules/imports",
-    //     "prettier"
-    // ],
     env: { browser: true },
-    parserOptions: {
-        ecmaVersion: 2018,
-        sourceType: "module"
+    "parserOptions": {
+        "ecmaVersion": 9
     },
     rules: {
-        "arrow-parens": ["error", "as-needed", { requireForBlockBody: false }],
+        "function-paren-newline": "off",
+        "arrow-parens": "off",
         "arrow-body-style": ["error", "as-needed", { requireReturnForObjectLiteral: false }],
         "func-names": "off",
         indent: [
@@ -40,8 +38,44 @@ module.exports = {
         "no-unused-expressions": ["error", { allowShortCircuit: true, allowTernary: true }],
         "no-use-before-define": ["error", { functions: false }],
         "max-len": "off",
-        quotes: ["error", "double", { avoidEscape: true }],
+        "object-curly-newline": [
+            "error",
+            {
+                ObjectExpression: { multiline: true, minProperties: 4, consistent: true },
+                ObjectPattern: { multiline: true, minProperties: 4 },
+                ImportDeclaration: { multiline: true, minProperties: 7 },
+                ExportDeclaration: { multiline: true, minProperties: 7 }
+            }
+        ],
+        "quotes": ["error", "double", { avoidEscape: true }],
         "space-before-function-paren": ["error", { anonymous: "never", named: "never", asyncArrow: "ignore" }],
-        "spaced-comment": "off"
+        "spaced-comment": "off",
+        /*
+         * Rules for jsdoc.
+         */
+        "require-jsdoc": [
+            "warn",
+            {
+                require: {
+                    FunctionDeclaration: true,
+                    MethodDefinition: true,
+                    ClassDeclaration: false,
+                    ArrowFunctionExpression: true,
+                    FunctionExpression: true
+                }
+            }
+        ],
+        "valid-jsdoc": [
+            "warn",
+            {
+                prefer: {
+                    arg: "param",
+                    argument: "param",
+                    virtual: "abstract"
+                },
+                requireReturn: false,
+                requireReturnType: true
+            }
+        ]
     }
 };
