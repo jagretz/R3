@@ -1,9 +1,4 @@
 {
-    "name": "react-redux-rx-boilerplate-wip",
-    "description": "Boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
-    "version": "0.1.0",
-    "private": false,
-    "homepage": ".",
     "scripts": {
         "start": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired start",
         "//start:powershell": "let ps set the commit as an env variable, $REACT_APP_VERSION=$(git log -1 --format=%h). Then webpack can access the variable.",
@@ -93,5 +88,28 @@
         "stylelint": "^9.6.0",
         "stylelint-config-css-modules": "^1.3.0",
         "stylelint-config-standard": "^18.2.0"
-    }
+    },
+    "homepage": ".",
+    "main": "index.html",
+    "name": "R3",
+    "description": "React + Redux + RxJS boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
+    "keywords": [
+        "react",
+        "redux",
+        "rxjs",
+        "redux-first-router",
+        "rudy",
+        "css-modules",
+        "postcss",
+        "jset",
+        "enzyme",
+        "istanbul",
+        "jsdoc",
+        "create-react-app",
+        "react-app-reqired"
+    ],
+    "author": "Jason Gretz",
+    "private": false,
+    "version": "0.1.0",
+    "license": "MIT"
 }
