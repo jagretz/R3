@@ -3,12 +3,14 @@
     "description": "Boilerplate / starter app for projects wanting to use react, redux, and rxjs as a base.",
     "version": "0.1.0",
     "private": false,
+    "homepage": ".",
     "scripts": {
         "start": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired start",
         "//start:powershell": "let ps set the commit as an env variable, $REACT_APP_VERSION=$(git log -1 --format=%h). Then webpack can access the variable.",
         "start:powershell": "set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired start",
         "start:bash": "REACT_APP_VERSION=$(git log -1 --format=%h) REACT_APP_BUILD=$npm_package_version react-app-rewired start",
         "build": "set REACT_APP_VERSION=$(git log -1 --format=%h)&&set REACT_APP_BUILD=%npm_package_version%&&react-app-rewired build",
+        "build:static": "cross-env PUBLIC_URL=. react-app-rewired build",
         "//test": "Jests' default env is jsdom, however, create-react-app defaults to node.",
         "test": "react-app-rewired test --env=jsdom",
         "test:coverage": "react-app-rewired test --env=jsdom --coverage",
@@ -62,6 +64,7 @@
         "rxjs": "^5.5.10"
     },
     "devDependencies": {
+        "cross-env": "^5.2.0",
         "deep-freeze": "0.0.1",
         "enzyme": "^3.6.0",
         "enzyme-adapter-react-16": "^1.5.0",

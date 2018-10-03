@@ -6,12 +6,25 @@ _This document is survived by you! Please help us keep this a living document by
 
 ## Table of Contents
 
-- [Installation & Startup](#installation-startup)
-- [Standards & Best Practices](#standards-best-practices)
-- [Testing](#testing)
-- [Documentation](#Documentation)
-- [Troubleshooting](#Troubleshooting)
+<!-- TOC -->
 
+- [Your-App-Name-Goes-Here](#your-app-name-goes-here)
+    - [Table of Contents](#table-of-contents)
+    - [Installation & Startup](#installation--startup)
+    - [Standards & Best Practices](#standards--best-practices)
+        - [React](#react)
+        - [Testing](#testing)
+            - [Test Coverage](#test-coverage)
+    - [Documentation](#documentation)
+        - [`@link`](#link)
+    - [Build Information](#build-information)
+        - [Static Server Reference](#static-server-reference)
+    - [Troubleshooting](#troubleshooting)
+        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)
+        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)
+            - [Resources](#resources)
+
+<!-- /TOC -->
 
 ## Installation & Startup
 
@@ -56,7 +69,7 @@ Configuration for these metrics is maintained inside package.json. Jest allows y
 
 Jest by default will run in a web environment using `jsdom`. Thought you might have noticed we include a specific `--env=jsdom` flag with our test scripts. This is another side effect from extending create-react-app which changes the default environemnt to node for improved performance. Not a big deal, but it's important to know why.
 
-## Docuemntation
+## Documentation
 
 [JSDoc](http://usejsdoc.org) has several forms of documenting the same thing. That's fine but it's easier when jumping into a project to have a bit of consistency. The following should clear up an ambiguity regarding preferences when using jsdoc.
 
@@ -77,6 +90,60 @@ Prefer,
 
 This approach is much quicker to read and understand what said string links to as opposed to parsing the url string to figure that out. URLs can be qutie log and ambiguous at times. Provided a name, first, is clear and tells the reader _immediately_ what said link is all about.
 
+## Build Information
+
+Builds follow [create-react-app](create-react-app) which you can read more about there.
+
+You can serve the build folder from a static server, one caveat, if you've set the `homepage` (we
+do) in your `package.json` reference URLs won't resolve correctly. That is because they resolve
+based on the `PUBLIC_URL` env variable; this is a node env.
+
+In order to work around this you have two options
+1. remove the `homepage` property, or per [create-react-app](create-react-app), set it to `.`
+1. set the `PUBLIC_URL` on build.
+
+Point 2 is easier imo but do what you want. Toss it on a [static server of your choice](https://gist.github.com/willurd/5720255)
+`http-server` and `serve` are both good choices if you don't have a preference.
+
+If you only want something to work quickly, you can run these commands after build.
+
+First, install http-server or serve globally.
+
+```bash
+# http-server
+npm i -g http-server
+
+# http-serve
+npm i -g server
+```
+Run the build using setting the `PUBLIC_URL` or use the included npm script `npm run build:static`
+
+```bash
+# setting env vars is different for different OS
+PUBLIC_URL=.
+```
+
+Serve the build dir
+
+```bash
+# use -p to specify the port, ie `-p 5000` or use the default port
+
+# http-server
+http-server build -p 3000 --cors
+
+# serve
+serve build -p 3000
+```
+
+http-server offers an easier CLI to reference but also requires you to specify disabling CORS for
+local access.
+
+
+### Static Server Reference
+
+- [http-server](https://www.npmjs.com/package/http-server)
+- [serve](https://www.npmjs.com/package/serve)
+- [static-server](https://www.npmjs.com/package/static-server)
 
 ## Troubleshooting
 
