@@ -56,7 +56,9 @@ module.exports = function override(config, env) {
      * postcss-preset-env already contains autoprefixer so we remove the duplicate to improve performance.
      * We do this before we add any additional plugins.
      */
-    const autoprefixerIndex = postcssPlugins.findIndex(plugin => plugin.postcssPlugin === "autoprefixer");
+    const autoprefixerIndex = postcssPlugins.findIndex(
+        plugin => plugin.postcssPlugin === "autoprefixer"
+    );
     if (autoprefixerIndex) postcssPlugins.splice(autoprefixerIndex, 1);
 
     postcssPlugins.push(
@@ -103,7 +105,9 @@ module.exports = function override(config, env) {
      * - splice in our css rule that includes CSS modules.
      * Two separate rules are applied: One for global css, and one for css modules.
      */
-    const oneOfIndex = config.module.rules.indexOf(getLoader(config.module.rules, rule => rule.oneOf));
+    const oneOfIndex = config.module.rules.indexOf(
+        getLoader(config.module.rules, rule => rule.oneOf)
+    );
     const cssRuleIndex = config.module.rules[oneOfIndex].oneOf.indexOf(cssRule);
 
     // Insert the static css rules

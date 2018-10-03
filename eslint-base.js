@@ -4,8 +4,8 @@
  */
 module.exports = {
     env: { browser: true },
-    "parserOptions": {
-        "ecmaVersion": 9
+    parserOptions: {
+        ecmaVersion: 9
     },
     rules: {
         "function-paren-newline": "off",
@@ -47,8 +47,11 @@ module.exports = {
                 ExportDeclaration: { multiline: true, minProperties: 7 }
             }
         ],
-        "quotes": ["error", "double", { avoidEscape: true }],
-        "space-before-function-paren": ["error", { anonymous: "never", named: "never", asyncArrow: "ignore" }],
+        quotes: ["error", "double", { avoidEscape: true }],
+        "space-before-function-paren": [
+            "error",
+            { anonymous: "never", named: "never", asyncArrow: "ignore" }
+        ],
         "spaced-comment": "off",
         /*
          * Rules for jsdoc.
