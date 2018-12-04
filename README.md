@@ -6,25 +6,7 @@ _This document is survived by you! Please help us keep this a living document by
 
 ## Table of Contents
 
-<!-- TOC -->
-
-- [Your-App-Name-Goes-Here](#your-app-name-goes-here)
-    - [Table of Contents](#table-of-contents)
-    - [Installation & Startup](#installation--startup)
-    - [Standards & Best Practices](#standards--best-practices)
-        - [React](#react)
-        - [Testing](#testing)
-            - [Test Coverage](#test-coverage)
-    - [Documentation](#documentation)
-        - [`@link`](#link)
-    - [Build Information](#build-information)
-        - [Static Server Reference](#static-server-reference)
-    - [Troubleshooting](#troubleshooting)
-        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)
-        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)
-            - [Resources](#resources)
-
-<!-- /TOC -->
+<!-- TOC -->autoauto- [Your-App-Name-Goes-Here](#your-app-name-goes-here)auto    - [Table of Contents](#table-of-contents)auto    - [Installation & Startup](#installation--startup)auto    - [Standards & Best Practices](#standards--best-practices)auto        - [React](#react)auto        - [Testing](#testing)auto            - [Test Coverage](#test-coverage)auto    - [Documentation](#documentation)auto        - [`@link`](#link)auto    - [Build Information](#build-information)auto        - [Static Server Reference](#static-server-reference)auto    - [Troubleshooting](#troubleshooting)auto        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)auto        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)auto            - [Resources](#resources)autoauto<!-- /TOC -->
 
 ## Installation & Startup
 
@@ -41,8 +23,8 @@ Provider pattern, HOC, renderProp
 
 If you think you want to create an HOC. Implement it using a renderProp first. They are more flexible. Those who need the flexibility can use the render prop. Those who want something more simple, can use it as an HOC.
 
-state Reducer Pattern (42:00) - for logic
-- redux state like tree, using reducers to maange it's state. Just like redux.
+Article > [state Reducer Pattern](https://blog.kentcdodds.com/the-state-reducer-pattern-%EF%B8%8F-b40316cfac57)
+- redux state like tree, using reducers to manage it's state. Just like redux.
 This pattern gives you complete control over the internal state of the component in a, albeit a bit complex, well-managed way.
 
 sync state pattern (46:00) - for logic that needs to manage same state (keep in sync) two or more components
