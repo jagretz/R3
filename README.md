@@ -6,7 +6,21 @@ _This document is survived by you! Please help us keep this a living document by
 
 ## Table of Contents
 
-<!-- TOC -->autoauto- [Your-App-Name-Goes-Here](#your-app-name-goes-here)auto    - [Table of Contents](#table-of-contents)auto    - [Installation & Startup](#installation--startup)auto    - [Standards & Best Practices](#standards--best-practices)auto        - [React](#react)auto        - [Testing](#testing)auto            - [Test Coverage](#test-coverage)auto    - [Documentation](#documentation)auto        - [`@link`](#link)auto    - [Build Information](#build-information)auto        - [Static Server Reference](#static-server-reference)auto    - [Troubleshooting](#troubleshooting)auto        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)auto        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)auto            - [Resources](#resources)autoauto<!-- /TOC -->
+- [Your-App-Name-Goes-Here](#your-app-name-goes-here)
+    - [Table of Contents](#table-of-contents)
+    - [Installation & Startup](#installation--startup)
+    - [Standards & Best Practices](#standards--best-practices)
+        - [React](#react)
+        - [Testing](#testing)
+            - [Test Coverage](#test-coverage)
+    - [Documentation](#documentation)
+        - [`@link`](#link)
+    - [Build Information](#build-information)
+        - [Static Server Reference](#static-server-reference)
+    - [Troubleshooting](#troubleshooting)
+        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)
+        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)
+            - [Resources](#resources)
 
 ## Installation & Startup
 
