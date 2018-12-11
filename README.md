@@ -4,32 +4,29 @@ _This document is survived by you! Please help us keep this a living document by
 
 # Your-App-Name-Goes-Here
 
-## Table of Contents
-
 - [Your-App-Name-Goes-Here](#your-app-name-goes-here)
-    - [Table of Contents](#table-of-contents)
-    - [Installation & Startup](#installation--startup)
-    - [Standards & Best Practices](#standards--best-practices)
-        - [React](#react)
-        - [Testing](#testing)
-            - [Test Coverage](#test-coverage)
-    - [Documentation](#documentation)
-        - [`@link`](#link)
-    - [Build Information](#build-information)
-        - [Static Server Reference](#static-server-reference)
-    - [Troubleshooting](#troubleshooting)
-        - [package.json re-formatting on install](#packagejson-re-formatting-on-install)
-        - [Jest test fail with ES2017](#jest-test-fail-with-es2017)
-            - [Resources](#resources)
+- [Installation & Startup](#installation--startup)
+- [Standards & Best Practices](#standards--best-practices)
+  - [React](#react)
+  - [Testing](#testing)
+    - [Test Coverage](#test-coverage)
+- [Documentation](#documentation)
+  - [`@link`](#link)
+- [Build Information](#build-information)
+  - [Static Server Reference](#static-server-reference)
+- [Troubleshooting](#troubleshooting)
+  - [package.json re-formatting on install](#packagejson-re-formatting-on-install)
+  - [Jest test fail with ES2017](#jest-test-fail-with-es2017)
+    - [Resources](#resources)
 
-## Installation & Startup
+# Installation & Startup
 
-This project was bootstrapped with [Create React App](create-react-app).
+This project was bootstrapped with [React App Rewired](https://github.com/timarney/react-app-rewired) which wraps [Create React App](https://github.com/facebookincubator/create-react-app) to seamlessly and and override webpack configurations.
 
 
-## Standards & Best Practices
+# Standards & Best Practices
 
-### React
+## React
 
 Solving problems with who is responsible for rendering the UI.
 
@@ -44,7 +41,7 @@ This pattern gives you complete control over the internal state of the component
 sync state pattern (46:00) - for logic that needs to manage same state (keep in sync) two or more components
 This is controlled props
 
-### Testing
+## Testing
 
 The documenation listed here is specific to the project starter. To view a more broad set of testing standards, view [Test Standards](https://github.com/jagretz/docs/tree/master/javascript/testing) and possibly other javascript testing information.
 
@@ -59,17 +56,17 @@ This project takes advantage of the following testing tools:
 
 If our test setup and configuration interests you, or if there is ever a need to add to it, you can read up on "how" and "why" the testing framework is configured. Documentation for test setup and configuration is located within our [test config directory](./jestSetup/README.md).
 
-#### Test Coverage
+### Test Coverage
 
 Configuration for these metrics is maintained inside package.json. Jest allows you to maintain a separate configuation file, however because we bootstrap the app with [create-react-app](create-react-app), the jest configuration must be maintained within the `package.json` as a top-level property. In order to override this we would need to extend the existing webpack configuration for testing with our own implementation.
 
 Jest by default will run in a web environment using `jsdom`. Thought you might have noticed we include a specific `--env=jsdom` flag with our test scripts. This is another side effect from extending create-react-app which changes the default environemnt to node for improved performance. Not a big deal, but it's important to know why.
 
-## Documentation
+# Documentation
 
 [JSDoc](http://usejsdoc.org) has several forms of documenting the same thing. That's fine but it's easier when jumping into a project to have a bit of consistency. The following should clear up an ambiguity regarding preferences when using jsdoc.
 
-### `@link`
+## `@link`
 
 [`@link`](http://usejsdoc.org/tags-inline-link.html)
 
@@ -86,7 +83,7 @@ Prefer,
 
 This approach is much quicker to read and understand what said string links to as opposed to parsing the url string to figure that out. URLs can be qutie log and ambiguous at times. Provided a name, first, is clear and tells the reader _immediately_ what said link is all about.
 
-## Build Information
+# Build Information
 
 Builds follow [create-react-app](create-react-app) which you can read more about there.
 
@@ -96,7 +93,7 @@ based on the `PUBLIC_URL` env variable; this is a node env.
 
 In order to work around this you have two options
 1. remove the `homepage` property, or per [create-react-app](create-react-app), set it to `.`
-1. set the `PUBLIC_URL` on build.
+2. set the `PUBLIC_URL` on build.
 
 Point 2 is easier imo but do what you want. Toss it on a [static server of your choice](https://gist.github.com/willurd/5720255)
 `http-server` and `serve` are both good choices if you don't have a preference.
@@ -135,15 +132,15 @@ http-server offers an easier CLI to reference but also requires you to specify d
 local access.
 
 
-### Static Server Reference
+## Static Server Reference
 
 - [http-server](https://www.npmjs.com/package/http-server)
 - [serve](https://www.npmjs.com/package/serve)
 - [static-server](https://www.npmjs.com/package/static-server)
 
-## Troubleshooting
+# Troubleshooting
 
-### package.json re-formatting on install
+## package.json re-formatting on install
 
 With earlier versions of npm, whenever you install a dependency the `package.json` will reformat to use a 2-space indentation.
 This is a known issue with earlier versions of npm, specifically `npm@4.*`. Starting with `npm@5.0.0` this is no longer an issue.
@@ -153,7 +150,7 @@ For reference, see:
 - [Twitter noise](https://twitter.com/maybekatz/status/860690502932340737)
 - [npmjs blog](http://blog.npmjs.org/post/161081169345/v500)
 
-### Jest test fail with ES2017
+## Jest test fail with ES2017
 
 If you are the latest release of jest with an earlier version of node, any version below 7.*, you will run into
 problems with tests, or units of code under test, that use the latest and greatest ES+ features.
@@ -173,7 +170,7 @@ methods won't exist _(pssst, they exist in node v7+)_
 - Customize your `package.json` or use a `.babelrc` with `babel-polyfill`
 - ...some other ways not listed.
 
-#### Resources
+### Resources
 
 - [Jest > Remove auto-inclusion of babel-polyfill #2755](https://github.com/facebook/jest/pull/2755)
 - [Jest > Changelog](https://github.com/facebook/jest/blob/cf2b9e80a0b099c2f861660fd9cf589848106fa1/CHANGELOG.md)
