@@ -16,3 +16,4 @@ max_line_length = 100
 # HTML types get 2 space indentation
 [*.{hbs,html,jsp,md,mdx}]
 indent_size = 2
+max_line_length = off
